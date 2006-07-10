@@ -1,5 +1,4 @@
 /build
-Makefile
-lex.yy.c
-ppy.tab.c
-ppy.tab.h
+/lex.yy.c
+/ppy.tab.c
+/ppy.tab.h
