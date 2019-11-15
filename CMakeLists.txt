@@ -27,7 +27,6 @@ if(CMAKE_CROSSCOMPILING)
         -Dstrtoll=_strtoi64
         -Dopen=_open
         -Dclose=_close)
-
     include_directories(${REACTOS_SOURCE_DIR}/sdk/include/reactos/wine)
 endif()
 
@@ -41,4 +40,5 @@ if(CMAKE_CROSSCOMPILING)
     add_library(wpp ${SOURCE})
 else()
     add_library(wpphost ${SOURCE})
+    target_link_libraries(wpphost PRIVATE host_includes)
 endif()
